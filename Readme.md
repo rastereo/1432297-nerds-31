@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Rostislav Kaptur](https://up.htmlacademy.ru/htmlcss/31/user/1432297).
-* Наставник: Егор Глебов.
+* Наставник: [Егор Глебов] (https://htmlacademy.ru/profile/beast).
 
 ---
 
