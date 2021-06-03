@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html">
-          <img src="https://via.placeholder.com/160x65" width="160" height="65" alt="logo Nerds">
+          <img src="img/logos/logo-nerds.svg" width="160" height="65" alt="logo Nerds">
         </a>
         <ul>
           <li><a href="blank.html">Студия</a></li>
@@ -16,6 +20,7 @@
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="blank.html">Контакты</a></li>
         </ul>
+        <a href="blank.html">Корзина</a>
       </nav>
     </header>
     <main>
@@ -38,15 +43,15 @@
                 <ul>
                     <li>
                         <input type="radio" name="grid" value="shaving" id="adaptive">
-            <label for="adaptive">Адаптивная</label>
+                        <label for="adaptive">Адаптивная</label>
                     </li>
                     <li>
                         <input type="radio" name="grid" value="shaving" id="fixed">
-            <label for="fixed">Фиксированная</label>
+                        <label for="fixed">Фиксированная</label>
                     </li>
                     <li>
                         <input type="radio" name="grid" value="shaving" id="Rubber">
-            <label for="Rubber">Резиновая</label>
+                        <label for="Rubber">Резиновая</label>
                     </li>
                 </ul>
             </fieldset>
@@ -83,53 +88,33 @@
             <button type="button">▼</button>
             <button type="button">▲</button>
         </section>
-        <ul>
-          <li>
-            <section>
-              <img src="https://via.placeholder.com/360x40" width="360" height="40" alt=""><br>
-              <img src="https://via.placeholder.com/359x578" width="359" height="578" alt=" site sedona">
-              <h3>Sedona</h3>
-              <p>Информационный сайт<br> для туристов</p>
-              <button type="button">9 900 ₽</button>
-            </section>
-          </li>
-          <li>
-            <section>
-              <img src="https://via.placeholder.com/360x40" width="360" height="40" alt=""><br>
-              <img src="https://via.placeholder.com/359x578" width="359" height="578" alt=" site pink app">
-              <h3>Pink App</h3>
-              <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
-              <button type="button">9 900 ₽</button>
-            </section>
-          </li>
-          <li>
-            <section>
-              <img src="https://via.placeholder.com/360x40" width="360" height="40" alt=""><br>
-              <img src="https://via.placeholder.com/359x578" width="359" height="578" alt="site borodinsky"> 
-            </section>
-          </li>
-          <li>
-            <section>
-              <img src="https://via.placeholder.com/360x40" width="360" height="40" alt=""><br>
-              <img src="https://via.placeholder.com/359x578" width="359" height="578" alt="site mishka">
-            </section> 
-          </li>
-          <li>
-            <section>
-              <img src="https://via.placeholder.com/360x40" width="360" height="40" alt=""><br>
-              <img src="https://via.placeholder.com/359x578" width="359" height="578" alt="site a+">
-            </section>
-          </li>
-          <li>
-            <section>
-              <img src="https://via.placeholder.com/360x40" width="360" height="40" alt=""><br>
-              <img src="https://via.placeholder.com/359x578" width="359" height="578" alt="site kvast"> 
-              <h3>КВАСТ</h3>
-              <p>Промо-сайт производителя<br> крафтового кваса</p>
-              <button type="button">9 900 ₽</button>
-            </section>
-          </li>
-        </ul>
+        <section>
+            <img src="img/catalog/web-sedona.jpg" width="359" height="578" alt=" site sedona">
+            <h3>Sedona</h3>
+            <p>Информационный сайт<br> для туристов</p>
+            <button type="button">9 900 ₽</button>
+        </section>
+        <section>
+            <img src="img/catalog/web-pink.jpg" width="359" height="578" alt=" site pink app">
+            <h3>Pink App</h3>
+            <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
+            <button type="button">9 900 ₽</button>
+        </section>
+        <section>
+            <img src="img/catalog/web-borodinski.jpg" width="359" height="578" alt="site borodinski"> 
+        </section>
+        <section>
+            <img src="img/catalog/web-mishka.jpg" width="359" height="578" alt="site mishka">
+        </section>
+        <section>
+            <img src="img/catalog/web-a+.jpg" width="359" height="578" alt="site a+">
+        </section>
+        <section>
+            <img src="img/catalog/web-kvast.jpg" width="359" height="578" alt="site kvast"> 
+            <h3>КВАСТ</h3>
+            <p>Промо-сайт производителя<br> крафтового кваса</p>
+            <button type="button">9 900 ₽</button>
+        </section>
         <div>
             <a href="">1</a>
             <a href="">2</a>
@@ -139,9 +124,9 @@
     </main>
     <footer>
       <ul>
-        <li><a href="blank.html"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="logo vk"></a></li>
-        <li><a href="blank.html"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="logo facebook"></a></li>
-        <li><a href="blank.html"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="logo instagram"></a></li>
+        <li><a href="blank.html"><img src="img/icons/icon-vk.svg" width="26" height="15" alt="logo vk"></a></li>
+        <li><a href="blank.html"><img src="img/icons/icon-facebook.svg" width="12" height="22" alt="logo facebook"></a></li>
+        <li><a href="blank.html"><img src="img/icons/icon-instagram.svg" width="21" height="21" alt="logo instagram"></a></li>
       </ul>
       <section>
         <h3>Давайте дружить, это выгодно!</h3>
