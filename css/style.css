@@ -1,0 +1,459 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400; 
+    font-style: normal;
+    src: local("roboto"),
+         url("roboto.woff2") format("woff2"),
+         url("roboto.woff") format("woff");
+  }
+  
+@font-face {
+    font-family: "Roboto Bold";
+    font-weight: 700;
+    font-style: normal;
+    src: local("robotobold"),
+         url("robotobold.woff2") format("woff2"),
+         url("robotobold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    font-weight: 800;
+    font-style: normal;
+    src: local("robotobold"),
+         url("robotomedium.woff.woff2") format("woff2"),
+         url("robotomedium.woff.woff") format("woff");         
+}
+
+/* Color */
+
+:root {
+    --basic-white: #FFFFFF;
+    --basic-silver: #EEEEEE;
+    --basic-extra-silver: #DFDFDF;
+    --basic-strong-silver: #D5D5D5;
+    --basic-black: #000000;
+    --basic-dark: #283136;
+    --basic-extra-dark: #444444;
+    --basic-grey: #666666;
+    --basic-pink: #FB565A;
+    --basic-extra-pink: #E74246;
+    --basic-strong-pink: #D7373B;
+    --basic-green: #00CA74;
+    --basic-extra-green: #00BC6C;
+    --basic-strong-green: #00AA62;
+    --basic-yellow: #EFC849;
+    --basic-extra-yellow: #EAB534;
+    --basic-strong-yellow: #E5A722;
+}
+
+/* Global */
+
+body {
+    max-width: 1440px;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--basic-black);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.page-title {
+    display: none;
+}
+
+/* Main header */
+
+header {
+    background-color: var(--basic-silver);
+}
+
+/* Main navigation */
+
+.main-nav {
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.main-button img:hover {
+    opacity: 0.7;
+
+}
+
+.main-button img:focus {
+    opacity: 0.3;
+}
+
+.site-nav a:hover,
+.basket:hover {
+    color: var(--basic-pink);
+}
+
+.site-nav a:focus,
+.basket:focus {
+    color: var(--basic-black);
+    opacity: 0.3;
+}    
+
+/* Slidshow */
+
+.slideshow-text h2 {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+}
+
+.slideshow-text,
+.slideshow {
+    background-color: var(--basic-silver);
+}
+
+.slideshow-text p {
+    color: var(--basic-dark)
+}
+
+.slideshow-text a {
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--basic-white);
+    background-color: var(--basic-pink);
+    border-radius: 3px;
+}
+
+.slideshow-text a:hover,
+.button-pink:hover,
+.contacts button:hover {
+    background-color: var(--basic-extra-pink);
+}
+
+.slideshow-text a:focus,
+.button-pink:focus,
+.contacts button:focus {
+    background-color: var(--basic-strong-pink);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border-radius: 3px;
+}
+
+.slideshow-button button {
+    border-radius: 100%
+}
+
+/* Features */
+
+.features-item h3 {
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.features-item p {
+    color: var(--basic-dark);
+}
+
+.features-item a {
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--basic-white);
+}
+
+.button-pink {
+    background-color: var(--basic-pink);
+    border-radius: 3px;
+}
+
+.button-green {
+    background-color: var(--basic-green);
+    border-radius: 3px;
+}
+
+.button-yellow {
+    background-color: var(--basic-yellow);
+    border-radius: 3px;
+}
+
+.button-green:hover {
+    background-color: var(--basic-extra-green);
+}
+
+.button-green:focus {
+    background-color: var(--basic-strong-green);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border-radius: 3px;
+}
+
+.button-yellow:hover {
+    background-color: var(--basic-extra-yellow);
+}
+
+.button-yellow:focus {
+    background-color: var(--basic-strong-yellow);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border-radius: 3px;
+    opacity: 0,3;
+}
+
+/* Text */
+
+.text {
+    color: var(--basic-dark);
+}
+
+.text h2 {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+    color: var(--basic-black);
+}
+
+.text h4 {
+    text-transform: uppercase;
+}
+
+.text li{
+    line-height: 50px;
+}
+
+/* Aside */
+
+.aside h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.aside-list p {
+    line-height: 18px;
+    color: var(--basic-dark)
+}
+
+.aside-list b {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 64px;
+    color: var(--basic-black);
+}
+
+.aside-list sup {
+    font-size: 26px;
+    line-height: 40px;
+}
+
+/* Company-list */
+
+.company-list img {
+    opacity: 0.2;
+}
+
+.company-list li img:hover {
+    opacity: 1;
+}
+
+.company-list li img:focus {
+    opacity: 0.1;
+}
+
+/* Contacts */
+
+.contacts {
+    line-height: 18px;
+    color: var(--basic-dark);
+}
+
+.contacts h4 {
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--basic-black);
+}
+
+.contacts-phone {
+    color: var(--basic-dark);
+}
+
+.contacts button {
+    font: inherit;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background: var(--basic-pink);
+    border-radius: 3px;
+    border: none;
+}
+
+/* Main footer */
+
+.footer-text h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.footer p {
+    line-height: 22px;
+    color: var(--basic-extra-dark);
+}
+
+/* Main Catalog */
+
+.catalog h1 {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    background-color: var(--basic-silver);
+    text-align: center;
+}
+
+/* Filters */
+
+.filters {
+    color: var(--basic-dark);
+}
+
+.filters fieldset {    
+    border: none;
+    line-height: 20px;
+}
+
+.filters legend,
+.filters h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+.cost-list li {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.cost-list input {
+    background-color: var(--basic-silver);
+    border: none;
+    border-radius: 3px;
+}
+
+.filter-option label {
+    opacity: 0.3;
+}
+
+.filter-option label:hover,
+.filter-option label:active {
+    opacity: 1;
+}
+
+.filter-button {
+    font: inherit;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: var(--basic-silver);
+    border: none;
+    border-radius: 3px;
+}
+
+.filter-button:hover {
+    background-color: var(--basic-extra-silver);
+}
+
+.filter-button:focus {
+    background-color: var(--basic-strong-silver);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border-radius: 3px;
+}
+
+.sort-button,
+.sort-button-show {
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.3;
+    border: none;
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+}
+
+.sort-button:hover,
+.sort-button-show:hover {
+    opacity: 0.6;
+}
+
+.sort-button:focus,
+.sort-button-show:focus {
+    opacity: 1;
+}
+
+/* Catalog */
+
+.sell-window {
+    background-color: var(--basic-silver);
+    text-align: center
+}
+
+.sell-window h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.sell-window p {
+    line-height: 18px;
+    color: var(--basic-grey);
+}
+
+.sell-window button {
+    color: var(--basic-white);
+    background-color: var(--basic-pink);
+    border-radius: 3px;
+    border: none;
+}
+
+.sell-window button:hover {
+    background-color: var(--basic-extra-pink);
+}
+
+.sell-window button:focus {
+    background-color: var(--basic-strong-pink);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);   
+}
+
+.page-number {
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.page-number-button {
+    background: var(--basic-silver);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.page-next-button {
+    background: var(--basic-silver);
+    border-radius: 3px;
+}
+
+.page-number a:hover {
+    background-color: var(--basic-extra-silver)
+}
+
+.page-number a:focus {
+    background-color: var(--basic-strong-silver);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border-radius: 3px;
+}
