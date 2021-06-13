@@ -51,8 +51,11 @@
 
 /* Global */
 
-body {
-    max-width: 1440px;
+.page {
+    height: 100%;
+}
+
+.page-body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", Arial, sans-serif;
@@ -60,6 +63,13 @@ body {
     line-height: 24px;
     font-weight: 400;
     color: var(--basic-black);
+
+    min-width: 1440px;
+    min-height: 100%;
+    
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
 }
 
 li {
@@ -76,10 +86,17 @@ a {
     display: none;
 }
 
+.center {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 /* Main header */
 
-header {
+.main-header {
     background-color: var(--basic-silver);
+    margin-bottom: 0px;
 }
 
 /* Main navigation */
@@ -87,15 +104,45 @@ header {
 .main-nav {
     font-weight: 500;
     line-height: 30px;
+
+    display: grid;
+    grid-template-columns: min-content 1fr min-content; 
+    grid-template-rows: 70px;
+    margin: 49px auto;
+    margin-bottom: 0px;
+}
+ 
+.main-button {
+    grid-column: 1/2;
+    justify-self: left;
 }
 
-.main-button img:hover {
+.main-button:hover {
     opacity: 0.7;
-
 }
 
-.main-button img:focus {
+.main-button:focus {
     opacity: 0.3;
+}
+
+.site-nav {
+    margin: 0;
+    padding: 0;
+    grid-column: 2/3;
+    justify-self: center;
+    display: flex; 
+    align-items: center;
+}
+
+.site-nav li:not(:last-child) {
+    margin-right: 45px;
+}
+
+.basket {
+    grid-column: 3/-1;
+    justify-self: right;
+    display: flex; 
+    align-items: center;
 }
 
 .site-nav a:hover,
@@ -107,31 +154,51 @@ header {
 .basket:focus {
     color: var(--basic-black);
     opacity: 0.3;
-}    
+}
 
 /* Slidshow */
+
+.slideshow-background {
+    background-color: var(--basic-silver);
+}
+
+.slideshow-grid {
+    margin: 0;
+    padding: 0;
+
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .slideshow-text h2 {
     font-weight: 500;
     font-size: 55px;
     line-height: 55px;
-}
-
-.slideshow-text,
-.slideshow {
-    background-color: var(--basic-silver);
+    margin-top: 75px;
+    margin-bottom: 25px;
 }
 
 .slideshow-text p {
-    color: var(--basic-dark)
+    color: var(--basic-dark);
+    margin-bottom: 38px;
 }
 
-.slideshow-text a {
+.slideshow-text a {    
     font-weight: 500;
     line-height: 18px;
     color: var(--basic-white);
     background-color: var(--basic-pink);
+    
+    width: 132px;
+    height: 18px;
+    padding: 17px 54px 15px 54px;
     border-radius: 3px;
+}
+
+.slideshow-img {
+    display: block;
 }
 
 .slideshow-text a:hover,
@@ -148,26 +215,40 @@ header {
     border-radius: 3px;
 }
 
-.slideshow-button button {
-    border-radius: 100%
-}
-
 /* Features */
+
+.features-list {
+    margin: 0;
+    padding: 0;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+}
 
 .features-item h3 {
     font-weight: 700;
     line-height: 30px;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
 
 .features-item p {
     color: var(--basic-dark);
+    margin-bottom: 49px;
 }
 
 .features-item a {
     font-weight: 500;
     line-height: 18px;
     color: var(--basic-white);
+
+    width: 81px;
+    height: 18px;
+    padding: 17px 40px 15px 39px;
+    border-radius: 3px;
 }
 
 .button-pink {
@@ -206,10 +287,23 @@ header {
     opacity: 0,3;
 }
 
+/* Text Aside Grid */
+
+.text-aside-grid {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 121px;
+
+    display: grid;
+    grid-template-columns: 1fr min-content;
+}
+
 /* Text */
 
 .text {
     color: var(--basic-dark);
+
+    grid-column: 1/2;
 }
 
 .text h2 {
@@ -228,6 +322,10 @@ header {
 }
 
 /* Aside */
+
+.aside {
+    grid-column: 2/-1;
+}
 
 .aside h4 {
     font-weight: 700;
@@ -253,6 +351,14 @@ header {
 
 /* Company-list */
 
+.company-list {
+    margin-bottom: 145px;
+}
+
+.company-list li:not(:last-child) {
+    margin-right: 100px;
+}
+
 .company-list img {
     opacity: 0.2;
 }
@@ -270,6 +376,10 @@ header {
 .contacts {
     line-height: 18px;
     color: var(--basic-dark);
+}
+
+.contacts img {
+    grid-column: 3/-1;
 }
 
 .contacts h4 {
@@ -294,13 +404,30 @@ header {
 
 /* Main footer */
 
+.footer-grid {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 139px;
+}
+
+.social-list {
+    grid-column: 1/2;
+}
+
+.footer-text {
+    grid-column: 2/-1;
+}
+
 .footer-text h2 {
     font-weight: 700;
     font-size: 36px;
-    line-height: 36px;
+    line-height: 6px;
 }
 
-.footer p {
+.footer-text p {
     line-height: 22px;
     color: var(--basic-extra-dark);
 }
