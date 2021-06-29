@@ -11,7 +11,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700;display=swap" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -33,23 +33,41 @@
   </header>
   <main class="content">
     <h1 class="visually-hidden">Студия дизайна «NЁRDS»</h1>
-    <div class="slideshow-background">
+    <div class="slider-background">
       <div class="center">
-        <div class="slideshow-grid">
-          <section class="slideshow-text">
-            <h2>Долго, дорого,<br> скрупулезно.</h2>
-            <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-            <a class="button" href="blank.html">УЗНАТЬ БОЛЬШЕ</a>
-          </section>
-          <section class="slideshow">
-            <img class="slideshow-img" src="img/slideshow/nerds-index-slide-1.png" width="760" height="431" alt="">
-            <ul class="slideshow-button">
-              <li><button class="slideshow-button-1" type="button"></button></li>
-              <li><button class="slideshow-button-2" type="button"></button></li>
-              <li><button class="slideshow-button-3" type="button"></button></li>
-            </ul>
-          </section>
-        </div>
+        <section class="slider">
+          <ul class="slider-list">
+            <li class="slide-current slider-item slide">
+              <div class="slide-text">
+                <h2 class="slide-title">Долго, дорого,<br> скрупулезно.</h2>
+                <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+                <a class="button" href="blank.html">Узнать больше</a>
+              </div>
+              <img class="slideshow-img" src="img/slideshow/nerds-index-slide-1.png" width="760" height="431" alt="">
+            </li>
+            <li class="slider-item slide">
+              <div class="slide-text">
+                <h2 class="slide-title">Любим математику,<br> как никто другой</h2>
+                <p>Никакого креатива, только математические формулы<br> для расчета идеальных пропорций.</p>
+                <a class="button" href="blank.html">Узнать больше</a>
+              </div>
+              <img class="slideshow-img" src="img/slideshow/nerds-index-slide-2.png" width="760" height="431" alt="">
+            </li>
+            <li class="slider-item slide">
+              <div class="slide-text">
+                <h2 class="slide-title">Только ночь<br> только хардкор</h2>
+                <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
+                <a class="button" href="blank.html">Узнать больше</a>
+              </div>
+              <img class="slideshow-img" src="img/slideshow/nerds-index-slide-3.png" width="760" height="431" alt="">
+            </li>
+          </ul>
+          <div class="slider-controls">
+            <button class="current" type="button" aria-label="slider-button-1"></button>
+            <button type="button" aria-label="slider-button-2"></button>
+            <button class="" type="button" aria-label="slider-button-3"></button>
+          </div>
+        </section>
       </div>
     </div>
     <div class="center">
@@ -105,7 +123,8 @@
         </section>
       </div>
       <ul class="company-list">
-        <li><a href="https://htmlacademy.ru/"><img src="img/logos/logo-htmlacademy.png" width="199" height="57" alt="logo HTML Academy"></a></li>
+        <li><a href="https://htmlacademy.ru/"><img src="img/logos/logo-htmlacademy.png" width="199" height="57"
+              alt="logo HTML Academy"></a></li>
         <li><img src="img/logos/logo-borodinski.png" width="209" height="90" alt="logo Borodinsky"></li>
         <li><img src="img/logos/logo-pink.png" width="185" height="52" alt="logo Pink"></li>
         <li><img src="img/logos/logo-mishka.png" width="173" height="84" alt="logo Mishka"></li>
@@ -120,7 +139,7 @@
           <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
           <button class="button" type="button">Напишите нам</button>
         </section>
-      </div>  
+      </div>
     </section>
   </main>
   <footer class="footer">

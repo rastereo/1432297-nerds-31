@@ -11,7 +11,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700;display=swap" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -24,7 +24,9 @@
         <ul class="site-nav">
           <li><a href="blank.html">Студия</a></li>
           <li><a href="blank.html">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
+          <li>
+            <div class="catalog-border"><a href="catalog.html">Магазин</a></div>
+          </li>
           <li><a href="blank.html">Контакты</a></li>
         </ul>
         <a class="cart" href="blank.html">Корзина</a>
@@ -38,39 +40,56 @@
     <div class="center">
       <div class="catalog-grid">
         <div class="sort-grid">
-          <h2>Стоимость:</h2>
           <h2>Сортировать:</h2>
-          <button class="sort-button" type="button">По цене</button>
-          <button class="sort-button" type="button">По типу</button>
-          <button class="sort-button" type="button">По названию</button>
-          <button class="sort-button-show" type="button">▼</button>
-          <button class="sort-button-show" type="button">▲</button>
+          <div class="sort-grid-button">
+            <button class="sort-button" type="button">По цене</button>
+            <button class="sort-button" type="button">По типу</button>
+            <button class="sort-button" type="button">По названию</button>
+          </div>
+          <div class="sort-grid-button-show">  
+            <button class="sort-button-show" type="button">▼</button>
+            <button class="sort-button-show" type="button">▲</button>
+          </div>
         </div>
         <section class="filters">
-          <fieldset class="cost">
-              <ul class="cost-list">
-                <li>
-                  <input class="cost-rang" type="range" min="0" max="1500" id="coast">
-                </li>
-                <li>
-                  <label>от<input class="cost-low" type="text" value="0"></label>
-                  <label>до<input class="cost-high" type="text" value="15000"></label>
-                </li>
-              </ul>
-          </fieldset>
+          <form method="get" action="index.html">
+            <fieldset class="filter-item">
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="width: 30%; margin-left: 20%;"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    От <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="min-price">
+                    До <input type="number" name="max-price" value="15000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </form>
           <fieldset class="site-grid">
             <legend>Сетка:</legend>
             <ul class="grid-list">
               <li class="filter-option filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="grid" value="shaving" id="adaptive">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="shaving"
+                  id="adaptive">
                 <label for="adaptive">Адаптивная</label>
               </li>
               <li class="filter-option filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="grid" value="shaving" id="fixed">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="shaving"
+                  id="fixed">
                 <label for="fixed">Фиксированная</label>
               </li>
               <li class="filter-option filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="grid" value="shaving" id="Rubber">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="shaving"
+                  id="Rubber">
                 <label for="Rubber">Резиновая</label>
               </li>
             </ul>
@@ -79,29 +98,33 @@
             <legend>Особенности:</legend>
             <ul class="features-site-list">
               <li class="filter-option filter-checkbox">
-                <input type="checkbox" name="slider" id="filter-slider" checked>
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slider"
+                  id="filter-slider" checked>
                 <label for="filter-slider">Слайдер</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages-block"
-                  id="filter-advantages-block">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                  name="advantages-block" id="filter-advantages-block">
                 <label for="filter-advantages-block">Блок преимуществ</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="news"
+                  id="filter-news" checked>
                 <label for="filter-news">Новости</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="gallery" id="filter-gallery">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="gallery"
+                  id="filter-gallery">
                 <label for="filter-gallery">Галерея</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="basket" id="filter-basket">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="basket"
+                  id="filter-basket">
                 <label for="filter-basket">Корзина</label>
               </li>
             </ul>
           </fieldset>
-            <button class="filter-button" type="submit">Показать</button>
+          <button class="filter-button" type="submit">Показать</button>
         </section>
         <div class="site-page-grid">
           <section class="work sedona">
@@ -138,12 +161,12 @@
             </div>
           </section>
         </div>
-          <div class="page-number-grid">
-            <a class="page-number-button" href="">1</a>
-            <a class="page-number-button" href="">2</a>
-            <a class="page-number-button" href="">3</a>
-            <a class="page-number-button" href="">Следующая</a>
-          </div>
+        <div class="page-number-grid">
+          <a class="page-number-button" href="">1</a>
+          <a class="page-number-button" href="">2</a>
+          <a class="page-number-button" href="">3</a>
+          <a class="page-number-button" href="">Следующая</a>
+        </div>
       </div>
     </div>
     <section class="contacts">
@@ -155,7 +178,7 @@
           <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
           <button class="button" type="button">Напишите нам</button>
         </section>
-      </div>  
+      </div>
     </section>
   </main>
   <footer class="footer">
