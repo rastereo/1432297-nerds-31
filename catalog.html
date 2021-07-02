@@ -19,7 +19,7 @@
     <div class="center">
       <nav class="main-nav">
         <a class="main-button" href="index.html">
-          <img src="img/logos/logo-nerds.svg" width="160" height="65" alt="logo Nerds">
+          <img src="img/logos/logo-nerds.svg" width="159.87" height="65.02" alt="logo Nerds">
         </a>
         <ul class="site-nav">
           <li><a href="blank.html">Студия</a></li>
@@ -46,9 +46,9 @@
             <button class="sort-button" type="button">По типу</button>
             <button class="sort-button" type="button">По названию</button>
           </div>
-          <div class="sort-grid-button-show">  
-            <button class="sort-button-show" type="button">▼</button>
-            <button class="sort-button-show" type="button">▲</button>
+          <div class="sort-grid-button-show">
+            <button class="sort-button-show" type="button">&#9660;</button>
+            <button class="sort-button-show" type="button">&#9650;</button>
           </div>
         </div>
         <section class="filters">
@@ -58,7 +58,7 @@
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
-                    <div class="bar" style="width: 30%; margin-left: 20%;"></div>
+                    <div class="bar" style=""></div>
                   </div>
                   <div class="toggle toggle-min" tabindex="0"></div>
                   <div class="toggle toggle-max" tabindex="0"></div>
@@ -74,57 +74,59 @@
               </div>
             </fieldset>
           </form>
-          <fieldset class="site-grid">
-            <legend>Сетка:</legend>
-            <ul class="grid-list">
-              <li class="filter-option filter-radio">
-                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="shaving"
-                  id="adaptive">
-                <label for="adaptive">Адаптивная</label>
-              </li>
-              <li class="filter-option filter-radio">
-                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="shaving"
-                  id="fixed">
-                <label for="fixed">Фиксированная</label>
-              </li>
-              <li class="filter-option filter-radio">
-                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid" value="shaving"
-                  id="Rubber">
-                <label for="Rubber">Резиновая</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="features">
-            <legend>Особенности:</legend>
-            <ul class="features-site-list">
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slider"
-                  id="filter-slider" checked>
-                <label for="filter-slider">Слайдер</label>
-              </li>
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
-                  name="advantages-block" id="filter-advantages-block">
-                <label for="filter-advantages-block">Блок преимуществ</label>
-              </li>
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="news"
-                  id="filter-news" checked>
-                <label for="filter-news">Новости</label>
-              </li>
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="gallery"
-                  id="filter-gallery">
-                <label for="filter-gallery">Галерея</label>
-              </li>
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="basket"
-                  id="filter-basket">
-                <label for="filter-basket">Корзина</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="filter-button" type="submit">Показать</button>
+          <form method="get" action="https://echo.htmlacademy.ru/">
+            <fieldset class="site-grid">
+              <legend>Сетка:</legend>
+              <ul class="grid-list">
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid"
+                    value="shaving" id="adaptive">
+                  <label for="adaptive">Адаптивная</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid"
+                    value="shaving" id="fixed">
+                  <label for="fixed">Фиксированная</label>
+                </li>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid"
+                    value="shaving" id="Rubber">
+                  <label for="Rubber">Резиновая</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="features">
+              <legend>Особенности:</legend>
+              <ul class="features-site-list">
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slider"
+                    id="filter-slider" checked>
+                  <label for="filter-slider">Слайдер</label>
+                </li>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                    name="advantages-block" id="filter-advantages-block">
+                  <label for="filter-advantages-block">Блок преимуществ</label>
+                </li>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="news"
+                    id="filter-news" checked>
+                  <label for="filter-news">Новости</label>
+                </li>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="gallery"
+                    id="filter-gallery">
+                  <label for="filter-gallery">Галерея</label>
+                </li>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="cart"
+                    id="filter-cart">
+                  <label for="filter-cart">Корзина</label>
+                </li>
+              </ul>
+            </fieldset>
+            <input class="filter-button" type="submit">
+          </form>
         </section>
         <div class="site-page-grid">
           <section class="work sedona">
@@ -132,15 +134,15 @@
             <div class="sell-window">
               <h3>Sedona</h3>
               <p>Информационный сайт<br> для туристов</p>
-              <button class="button" type="button">9 900 ₽</button>
+              <button class="button" type="button">9 900 &#8381;</button>
             </div>
           </section>
           <section class="work pink-app">
-            <img src="img/catalog/web-pink.jpg" width="359" height="578" alt=" site pink app">
+            <img src="img/catalog/web-pink.jpg" width="359" height="578" alt="site pink app">
             <div class="sell-window">
               <h3>Pink App</h3>
               <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
-              <button type="button">9 900 ₽</button>
+              <button type="button">9 900 &#8381;</button>
             </div>
           </section>
           <section class="work borodinski">
@@ -157,12 +159,12 @@
             <div class="sell-window">
               <h3>КВАСТ</h3>
               <p>Промо-сайт производителя<br> крафтового кваса</p>
-              <button class="button" type="button">9 900 ₽</button>
+              <button class="button" type="button">9 900 &#8381;</button>
             </div>
           </section>
         </div>
         <div class="page-number-grid">
-          <a class="page-number-button" href="">1</a>
+          <a class="page-number-button active" href="">1</a>
           <a class="page-number-button" href="">2</a>
           <a class="page-number-button" href="">3</a>
           <a class="page-number-button" href="">Следующая</a>

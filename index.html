@@ -123,8 +123,8 @@
         </section>
       </div>
       <ul class="company-list">
-        <li><a href="https://htmlacademy.ru/"><img src="img/logos/logo-htmlacademy.png" width="199" height="57"
-              alt="logo HTML Academy"></a></li>
+        <li><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logos/logo-htmlacademy.png" width="199"
+              height="57" alt="logo HTML Academy"></a></li>
         <li><img src="img/logos/logo-borodinski.png" width="209" height="90" alt="logo Borodinsky"></li>
         <li><img src="img/logos/logo-pink.png" width="185" height="52" alt="logo Pink"></li>
         <li><img src="img/logos/logo-mishka.png" width="173" height="84" alt="logo Mishka"></li>
@@ -160,6 +160,28 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal-email">
+    <h2>Напишите нам</h2>
+    <form method="post" action="https://echo.htmlacademy.ru/">
+      <p>
+        <label for="email-name">Ваше имя:</label>
+        <input id="email-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="email-email">Ваш email:</label>
+        <input id="email-email" type="email" name="email" placeholder="email@example.com ">
+      </p>
+      <p>
+        <label for="email-text">Текст письма:</label>
+        <textarea id="email-text" type="text" name="text-email" placeholder="В свободной форме"
+          resize="none"></textarea>
+      </p>
+      <button type="submit" class="button-send-email">Отправить</button>
+    </form>
+    <button type="button" class="button-close" aria-label="Закрыть"></button>
+  </section>
+
 </body>
 
 </html>
