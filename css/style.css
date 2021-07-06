@@ -112,7 +112,7 @@
     width: 437px;
     height: min-content;
     margin: 0px;
-    margin-top: 17px;
+    margin-top: 18px;
     margin-right: 246px;
     padding: 0px;
 
@@ -121,8 +121,15 @@
     flex-wrap: wrap;
 }
 
-.border-current {
+.site-nav li {
     height: 43px;
+    position: relative;
+    top: 6px;
+    left: 0;
+    right: 0;
+}
+
+.border-current {
     border-bottom: 2px solid;
     border-color: var(--basic-pink);
     cursor: default;
@@ -316,7 +323,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
 }
 
 .slide-title {
@@ -355,12 +361,12 @@
 }
 .slide .button:hover,
 .button-pink:hover,
-.contacts button:hover {
+.contacts .button:hover {
     background-color: var(--basic-extra-pink);
 }
 .slide .button:focus,
 .button-pink:focus,
-.contacts button:focus {
+.contacts .button:focus {
     background-color: var(--basic-strong-pink);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
     border-radius: 3px;
@@ -855,19 +861,17 @@
 .contacts-phone {
     margin: 0px;
     margin-top: 18px;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     padding: 0px;
     color: var(--basic-grey);
 }
 
-.contacts-text button {
-    width: 219px;
-    height: 49px;
+.contacts-text .button {
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
     margin: 0px;
-    padding: 0px;
+    padding: 17px 45px;
     color: var(--basic-white);
 
     background: var(--basic-pink);
@@ -904,7 +908,7 @@
 .catalog-grid {
     margin: 0;
     padding: 0;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 
     display: grid;
     grid-template-areas: 
@@ -944,7 +948,7 @@
 }
 
 .site-page-grid {
-    width: 760px;
+    height: min-content;
     margin: 0px;
     margin-bottom: 54px;
     padding: 0px;
@@ -958,15 +962,15 @@
 }
 
 .page-number-grid {
-    width: 443px;
     margin: 0px;
     padding: 0px;
 
     grid-area: page-number-grid;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Filters */
@@ -994,6 +998,7 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .sort-grid-button-show {
@@ -1001,6 +1006,7 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .sort-button,
@@ -1012,18 +1018,17 @@
     font-size: 14px;
     line-height: 18px;
     opacity: 0.3;
-    border: none;
-    text-transform: uppercase;
-    background-color: var(--basic-white);
 }
 
 .sort-button:hover,
-.sort-button-show:hover {
+.sort-button-show:hover,
+.sort-button:focus,
+.sort-button-show:focus  {
     opacity: 0.6;
 }
 
-.sort-button:focus,
-.sort-button-show:focus {
+.sort-button:active,
+.sort-button-show:active {
     opacity: 1;
 }
 
@@ -1052,6 +1057,7 @@
     margin: 0px;
     padding: 0px;
     position: relative;
+    color: var(--basic-dark);
     
     display: block;
     cursor: pointer;
@@ -1062,8 +1068,6 @@
     line-height: 20px;
     margin: 0;
     padding: 0;
-    
-    opacity: 0.3;
 }
 
 .filter-radio {
@@ -1078,9 +1082,71 @@
     margin-bottom: 20px;
 }
 
-.filter-option:hover,
-.filter-option:active,
-.filter-option:checked {
+.filter-input+label:hover::before,
+.filter-input+label:focus::before {
+    opacity: 1;
+}    
+
+.filter-input-radio:checked+label::before,
+.filter-input-radio:checked+label::after {
+    opacity: 1;
+}
+
+.filter-input:disabled+label,
+.filter-input:disabled+label:hover::before {
+    opacity: 0.4;
+}
+
+.filter-input-radio+label::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: -1px;
+    left: -36px;
+    border: 4px solid;
+    border-color: #4D4D4D;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.filter-input-radio:checked+label::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 7px;
+    left: -28px;
+    background-color: #4D4D4D;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.filter-input-checkbox+label::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    top: 0px;
+    left: -36px;
+    position: absolute;
+
+    background-image: url("../img/icons/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.4;
+}
+
+.filter-input-checkbox:checked+label::after {
+    content: "";
+    width: 25px;
+    height: 23px;
+    position: absolute;
+    left: -36px;
+
+    background-image: url("../img/icons/checkbox-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: var(--basic-white);
     opacity: 1;
 }
 
@@ -1108,56 +1174,6 @@
     background-color: var(--basic-strong-silver);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
     border-radius: 3px;
-}
-
-.filter-input-radio+label::before {
-    content: "";
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    top: -1px;
-    left: -36px;
-    border: 4px solid;
-    border-color: #4D4D4D;
-    border-radius: 50%;
-}
-
-.filter-input-radio:checked+label::after {
-    content: "";
-    width: 9px;
-    height: 9px;
-    position: absolute;
-    top: 7px;
-    left: -28px;
-    background-color: #4D4D4D;
-    border-radius: 50%;
-}
-
-.filter-input-checkbox+label::before {
-    content: "";
-    width: 23px;
-    height: 23px;
-    top: 0px;
-    left: -36px;
-    position: absolute;
-
-    background-image: url("../img/icons/checkbox-off.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
-.filter-input-checkbox:checked+label::after {
-    content: "";
-    width: 25px;
-    height: 23px;
-    position: absolute;
-    left: -36px;
-
-    background-image: url("../img/icons/checkbox-on.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-color: var(--basic-white);
-
 }
 
 /** Filters Range Cost **/
@@ -1314,11 +1330,17 @@
     opacity: 1;
 }
 
-
+.work:focus .sell-window,
+.work:hover .sell-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
 
 .sell-window {
     width: 370px;
-    height: 233px;
+    height: min-content;
     margin: 0px;
     padding: 0px;
     width: 360px;
@@ -1326,13 +1348,10 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    display: none;
 
     position: absolute;
-    top: 349px;
+    bottom: 0;
 }
 
 .sell-window h3 {
@@ -1350,6 +1369,8 @@
     margin: 0px;
     margin-bottom: 33px;
     padding: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
     line-height: 19px;
     font-weight: 400;
     color: var(--basic-grey);
@@ -1381,12 +1402,20 @@
 .page-number-button {
     font-weight: 500;
     line-height: 18px;
+    margin-right: 11px;
+    margin-bottom: 11px;
     text-transform: uppercase;
     background: var(--basic-silver);
     box-sizing: border-box;
     border-radius: 3px;
 
-    padding: 17px 20px 15px 20px;
+    padding: 17px 21px 15px 21px;
+    order: 2;
+}
+
+.page-number-button:nth-last-child(2){
+    padding: 17px 72px 15px 71px;
+    order: 1;
 }
 
 .page-number-button:nth-last-child(1){
