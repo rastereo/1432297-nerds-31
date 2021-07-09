@@ -40,13 +40,13 @@
         <div class="sort-grid">
           <h2>Сортировать:</h2>
           <div class="sort-grid-button">
-            <a class="sort-button link">По цене</a>
-            <a class="sort-button link">По типу</a>
-            <a class="sort-button link">По названию</a>
+            <a class="sort-button sort-button-active link" href="">По цене</a>
+            <a class="sort-button link" href="">По типу</a>
+            <a class="sort-button link" href="">По названию</a>
           </div>
           <div class="sort-grid-button-show">
-            <a class="sort-button-show">&#9660;</a>
-            <a class="sort-button-show">&#9650;</a>
+            <a class="sort-button-show sort-button-active link" href="">&#9660;</a>
+            <a class="sort-button-show link" href="">&#9650;</a>
           </div>
         </div>
         <section class="filters">
@@ -66,7 +66,7 @@
                     От <input type="number" name="min-price" value="0">
                   </label>
                   <label class="max-price">
-                    До <input type="number" name="max-price" value="150000">
+                    До <input type="number" name="max-price" value="150000" placeholder="150 000">
                   </label>
                 </div>
               </div>
@@ -130,7 +130,9 @@
           <section class="work sedona">
             <img src="img/catalog/web-sedona.jpg" width="359" height="578" alt=" site sedona">
             <div class="sell-window">
-              <a class="link" href=""><h3>Sedona</h3></a>
+              <a class="link" href="">
+                <h3>Sedona</h3>
+              </a>
               <p>Информационный сайт для туристов</p>
               <button class="button" type="button">9 900 &#8381;</button>
             </div>
@@ -138,7 +140,9 @@
           <section class="work pink-app">
             <img src="img/catalog/web-pink.jpg" width="359" height="578" alt="site pink app">
             <div class="sell-window">
-              <a class="link" href=""><h3>Pink App</h3></a>
+              <a class="link" href="">
+                <h3>Pink App</h3>
+              </a>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
               <button type="button">9 900 &#8381;</button>
             </div>
@@ -146,31 +150,39 @@
           <section class="work borodinski">
             <img src="img/catalog/web-borodinski.jpg" width="359" height="578" alt="site web-borodinski">
             <div class="sell-window">
-              <a class="link" href=""><h3>Borodinski</h3></a>
-              <p></p>
+              <a class="link" href="">
+                <h3>Barbershop</h3>
+              </a>
+              <p>Сайт салона красоты.&nbsp;Для мужчин, да.</p>
               <button type="button">9 900 &#8381;</button>
             </div>
           </section>
           <section class="work mishka">
             <img src="img/catalog/web-mishka.jpg" width="359" height="578" alt="site mishka">
             <div class="sell-window">
-              <a class="link" href=""><h3>Mishka</h3></a>
-              <p></p>
+              <a class="link" href="">
+                <h3>Mishka</h3>
+              </a>
+              <p>Интернет-магазин вязаных игрушек</p>
               <button type="button">9 900 &#8381;</button>
             </div>
           </section>
           <section class="work aplus">
             <img src="img/catalog/web-a+.jpg" width="359" height="578" alt="site a+">
             <div class="sell-window">
-              <a class="link" href=""><h3>A+</h3><a>
-              <p></p>
+              <a class="link" href="">
+                <h3>A plus</h3>
+              </a>
+              <p>Лендинг курсов повышения квалификации</p>
               <button type="button">9 900 &#8381;</button>
             </div>
           </section>
           <section class="work kvast">
             <img src="img/catalog/web-kvast.jpg" width="359" height="578" alt="site kvast">
             <div class="sell-window">
-              <a class="link" href=""><h3>КВАСТ</h3></a>
+              <a class="link" href="">
+                <h3>Кваст</h3>
+              </a>
               <p>Промо-сайт производителя крафтового кваса</p>
               <button class="button" type="button">9 900 &#8381;</button>
             </div>
@@ -180,7 +192,7 @@
           <a class="page-number-button link active" href="">1</a>
           <a class="page-number-button link" href="">2</a>
           <a class="page-number-button link" href="">3</a>
-          <a class="visually-hidden page-number-button link" href="">Предыдущая</a>
+          <a class="visually-hidden page-number-button link">Предыдущая</a>
           <a class="page-number-button link" href="">Следующая</a>
         </div>
       </div>
@@ -249,7 +261,6 @@
     </form>
     <button type="button" class="button-close" aria-label="Закрыть"></button>
   </section>
-<script src="/script.js"></script>
 </body>
 
 </html>
