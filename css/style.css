@@ -98,7 +98,7 @@
 .main-nav {
     font-weight: 500;
     line-height: 30px;
-    margin-top: 50px;
+    margin-top: 49px;
 
     display: flex;
     justify-content: flex-start;
@@ -108,7 +108,7 @@
 .main-button {
     width: 160px;
     height: 65px;
-    margin-right: 202px;
+    margin-right: 203px;
 }
 
 .main-button:hover,
@@ -121,11 +121,11 @@
 }
 
 .site-nav {
-    width: 437px;
+    width: 450px;
     height: min-content;
     margin: 0px;
     margin-top: 18px;
-    margin-right: 246px;
+    margin-right: 234px;
     padding: 0px;
 
     display: flex;
@@ -141,7 +141,7 @@
     right: 0;
 }
 
-.site-nav li:not(:nth-child(4)) {
+.site-nav li:not(:nth-child(4n)) {
     margin-right: 45px;
 }
 
@@ -191,7 +191,7 @@
 
 .footer {
     padding-top: 65px;
-    padding-bottom: 68px;
+    padding-bottom: 58px;
 }
 
 .footer-grid {
@@ -294,50 +294,36 @@
 }
 
 .slide {
-    width: 1157px;
-    height: 431px;
+    height: min-content;
     position: relative;
+
+    background-repeat: no-repeat;
+    background-position: 397px;
+    
+}
+
+.slide:nth-of-type(1)  {
+    background-image: url("../img/slideshow/nerds-index-slide-1.png");
+}
+
+.slide:nth-of-type(2) {
+    background-image: url("../img/slideshow/nerds-index-slide-2.png");
+}
+
+.slide:nth-of-type(3) {
+    background-image: url("../img/slideshow/nerds-index-slide-3.png");
 }
 
 .slide-closed {
     display: none;
 }
 
-.slide::after {
-    content: "";
-    width: 760px;
-    height: 431px;
-    margin: 0;
-    padding: 0;
-
-    background-repeat: no-repeat;
-    background-position: 0 0;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    z-index: 0;
-}
-
-.slide:nth-of-type(1)::after  {
-    background-image: url("../img/slideshow/nerds-index-slide-1.png");
-}
-
-.slide:nth-of-type(2)::after  {
-    background-image: url("../img/slideshow/nerds-index-slide-2.png");
-}
-
-.slide:nth-of-type(3)::after  {
-    background-image: url("../img/slideshow/nerds-index-slide-3.png");
-}
-
-
 .slide-text {
     width: 526px;
-    margin-top: 78px;
+    padding-top: 78px;
+    padding-bottom: 80px;
 
-    position: absolute;
+    position: relative;
     z-index: 1;
     
     display: flex;
@@ -816,29 +802,15 @@
     position: relative;
 }
 
-.contacts::before {
-    content: "";
-    margin: 0 auto;
-    padding: 0;
-    height: 416px;
-    width: 1440px;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    background-image: url("../img/map.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    z-index: 0;
-}
-
 .contacts-map {
+    min-height: 416px;
     margin: 0 auto;
     padding: 0;
     position: relative;
     z-index: 0;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .contacts-map iframe {
@@ -950,7 +922,7 @@
     height: min-content;
     margin: 0px;
     padding: 0px;
-    margin-bottom: 88px;
+    margin-bottom: 89px;
 
     grid-area: sort-grid;
 
@@ -1086,7 +1058,7 @@
     color: var(--basic-black);
     text-transform: uppercase;
 
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
 .filter-option label {
@@ -1662,11 +1634,12 @@
     transform: rotate(-45deg);
 }
 
-.button-close:hover {
+.button-close:hover,
+.button-close:focus {
     opacity: 0.3;
 }
 
-.button-close:focus {
+.button-close:active {
     opacity: 0.1;
 }
 
