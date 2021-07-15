@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700;display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -116,12 +116,15 @@
         </section>
       </div>
       <ul class="company-list marker-none">
-        <li><a class="link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logos/logo-htmlacademy.png"
-              width="199" height="57" alt="Логотип HTML Academy"></a></li>
-        <li><a href=""><img src="img/logos/logo-borodinski.png" width="209" height="90" alt="Логотип Borodinsky"></a>
+        <li><a class="link logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss"><img
+              src="img/logos/logo-htmlacademy.png" width="199" height="57" alt="Логотип HTML Academy"></a></li>
+        <li><a class="logo-borodinski" href=""><img src="img/logos/logo-borodinski.png" width="209" height="90"
+              alt="Логотип Borodinsky"></a>
         </li>
-        <li><a href=""><img src="img/logos/logo-pink.png" width="185" height="52" alt="Логотип Pink"></a></li>
-        <li><a href=""><img src="img/logos/logo-mishka.png" width="173" height="84" alt="Логотип Mishka"></a></li>
+        <li><a class="logo-pink" href=""><img src="img/logos/logo-pink.png" width="185" height="52"
+              alt="Логотип Pink"></a></li>
+        <li><a class="logo-mishka" href=""><img src="img/logos/logo-mishka.png" width="173" height="84"
+              alt="Логотип Mishka"></a></li>
       </ul>
     </div>
     <section class="contacts">
@@ -135,8 +138,7 @@
       </div>
       <div class="contacts-map">
         <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaf41c792a5790593b78944b117f48d0ccca726eb3a66611d9de3295df8c25297&amp;source=constructor"
-          width="100%" height="416"></iframe>
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaf41c792a5790593b78944b117f48d0ccca726eb3a66611d9de3295df8c25297&amp;source=constructor"></iframe>
       </div>
     </section>
   </main>
@@ -170,20 +172,20 @@
     </div>
   </footer>
 
-  <section class="modal modal-email visually-hidden">
+  <section class="modal modal-email">
     <h2>Напишите нам</h2>
-    <form method="post" action="https://echo.htmlacademy.ru/">
+    <form class="email-form" method="post" action="https://echo.htmlacademy.ru/">
       <p>
         <label for="email-name">Ваше имя:</label>
-        <input id="email-name" type="text" name="name" placeholder="Имя Фамилия">
+        <input class="login-name" id="email-name" type="text" name="name" placeholder="Имя Фамилия">
       </p>
       <p>
         <label for="email-email">Ваш email:</label>
-        <input id="email-email" type="email" name="email" placeholder="email@example.com ">
+        <input class="login-email" id="email-email" type="email" name="email" placeholder="email@example.com ">
       </p>
       <p>
         <label for="email-text">Текст письма:</label>
-        <textarea id="email-text" name="text-email" placeholder="В свободной форме"></textarea>
+        <textarea class="login-text" id="email-text" name="text-email" placeholder="В свободной форме"></textarea>
       </p>
       <button type="submit" class="button-send-email">Отправить</button>
     </form>
