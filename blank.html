@@ -60,6 +60,26 @@
       </section>
     </div>
   </footer>
+
+  <section class="modal modal-email">
+    <h2>Напишите нам</h2>
+    <form class="email-form" method="post" action="https://echo.htmlacademy.ru/">
+      <p>
+        <label for="email-name">Ваше имя:</label>
+        <input class="login-name" id="email-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="email-email">Ваш email:</label>
+        <input class="login-email" id="email-email" type="email" name="email" placeholder="email@example.com ">
+      </p>
+      <p>
+        <label for="email-text">Текст письма:</label>
+        <textarea class="login-text" id="email-text" name="text-email" placeholder="В свободной форме"></textarea>
+      </p>
+      <button type="submit" class="button-send-email">Отправить</button>
+    </form>
+    <button type="button" class="button-close" aria-label="Закрыть"></button>
+  </section>
 </body>
 
 </html>
